@@ -1,0 +1,82 @@
+/* Corpo */
+
+body {
+    background-color: rgb(27, 26, 26);
+    font: normal 15pt Arial;
+}
+
+
+/* Cabeçalho, h1 */
+
+header {
+    text-align: center;
+    font: normal 20pt Arial;
+    color: rgb(212, 224, 224);
+}
+
+
+/* Seção que vai mostrar o raio insirido */
+
+section {
+    width: 20em;
+    height: 20em;
+    background-color: #cecece;
+    margin: auto;
+    padding: 1em;
+    text-align: center;
+    box-shadow: .1em .1em #606060;
+}
+
+
+/* Seção pro usuario copiar */
+
+textarea {
+    width: 18em;
+    height: 15em;
+    text-justify: auto;
+    margin-top: 5em;
+}
+
+
+/* Aonde o usuario vai digitar o raio */
+
+input {
+    background-color: #cecece;
+    width: 3em;
+    display: block;
+    position: relative;
+    text-align: center;
+    border-radius: 3px;
+}
+
+
+/* Raio superior esquerdo */
+
+#seinput {
+    right: 5.3em;
+    bottom: 3em;
+}
+
+
+/* Raio superior direito */
+
+#sdinput {
+    left: 32em;
+    bottom: 4.6em;
+}
+
+
+/* Raio inferior esquerdo */
+
+#ieinput {
+    right: 5.3em;
+    top: 3em;
+}
+
+
+/* Raio inferior direito */
+
+#idinput {
+    left: 32em;
+    top: 1.5em;
+}

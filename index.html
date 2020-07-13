@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border radius</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Border radius generator</h1>
+    </header>
+    <section id="sec">
+        <input type="number" name="valor" id="seinput" min="1" max="999" onkeyup="raio()">
+        <input type="number" name="valor" id="sdinput" min="1" max="999" onkeyup="raio()">
+        <div>
+            <textarea name="texto" id="input" cols="30" rows="10" readonly></textarea>
+            <p><button onclick="copia()">Copiar</button></p>
+        </div>
+
+        <input type="number" name="valor" id="ieinput" min="1" max="999" onkeyup="raio()">
+        <input type="number" name="valor" id="idinput" min="1" max="999" onkeyup="raio()">
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
