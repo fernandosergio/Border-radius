@@ -6,6 +6,7 @@
 body {
     background-color: rgb(27, 26, 26);
     font: normal 15pt Arial;
+    min-width: 28em;
 }
 
 
