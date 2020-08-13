@@ -1,11 +1,15 @@
 let sec = window.document.getElementById('sec')
 var texto = window.document.getElementById('input')
+let botao = window.document.getElementById('botao')
+let con = window.document.getElementById('confirmado')
 
 function copia() {
 
     texto.select()
     texto.setSelectionRange(0, 99999)
     document.execCommand('copy')
+    botao.style.backgroundColor = '#adff2f'
+    con.innerHTML += 'Copiado!'
 
 }
 
@@ -36,9 +40,13 @@ function raio() {
 
 function atualiza1(se = 0) {
     sec.style.borderRadius = `${se}px`
+    botao.style.backgroundColor = '#cecece'
+    con.innerHTML = ''
 }
 
 
 function atualiza4(se = 0, sd = 0, id = 0, ie = 0) {
     sec.style.borderRadius = `${se}px ${sd}px ${id}px ${ie}px`
+    botao.style.backgroundColor = '#cecece'
+    con.innerHTML = ''
 }

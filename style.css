@@ -4,23 +4,22 @@
 /* Corpo */
 
 body {
+    font-family: 'Baloo Da 2', cursive;
     background-color: rgb(107, 203, 228);
-    font: normal 15pt Arial;
-    min-width: 28em;
+    font: normal 15pt;
+    min-width: 28rem;
 }
 
 
 /* Cabeçalho, h1 */
 
 header {
-    font-family: 'Baloo Da 2', cursive;
     text-align: center;
     font: normal 20pt;
     color: rgb(255, 255, 255);
 }
 
 section h1 {
-    font-family: 'Baloo Da 2', cursive;
     text-align: center;
     font: normal 15pt;
     color: #fff;
@@ -31,7 +30,7 @@ section h1 {
 
 section {
     width: 30rem;
-    height: 25rem;
+    height: 27rem;
     background-color: #5c8aee;
     margin: auto;
     padding: 1rem;
@@ -112,4 +111,21 @@ input[type=number]::-webkit-inner-spin-button {
 #idinput {
     right: -4rem;
     bottom: -1.5rem;
+}
+
+
+/* Formantando o button */
+
+button {
+    width: 7em;
+    height: 2.5rem;
+    background-color: #cecece;
+    border-radius: .3rem;
+}
+
+button>p {
+    font-family: 'Baloo Da 2', cursive;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 0;
 }
