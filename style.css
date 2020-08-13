@@ -6,6 +6,7 @@
 body {
     background-color: rgb(107, 203, 228);
     font: normal 15pt Arial;
+    min-width: 28em;
 }
 
 
@@ -45,6 +46,18 @@ section {
 textarea {
     width: 18rem;
     height: 15rem;
+}
+
+
+/* Tira as setas do input */
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
 }
 
 
