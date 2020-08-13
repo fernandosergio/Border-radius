@@ -4,7 +4,7 @@
 /* Corpo */
 
 body {
-    background-color: rgb(27, 26, 26);
+    background-color: rgb(107, 203, 228);
     font: normal 15pt Arial;
 }
 
@@ -14,73 +14,89 @@ body {
 header {
     font-family: 'Baloo Da 2', cursive;
     text-align: center;
-    font: normal 20pt Arial;
-    color: rgb(212, 224, 224);
+    font: normal 20pt;
+    color: rgb(255, 255, 255);
+}
+
+section h1 {
+    font-family: 'Baloo Da 2', cursive;
+    text-align: center;
+    font: normal 15pt;
+    color: #fff;
 }
 
 
 /* Seção que vai mostrar o raio insirido */
 
 section {
-    width: 20em;
-    height: 20em;
-    background-color: #cecece;
+    width: 30rem;
+    height: 25rem;
+    background-color: #5c8aee;
     margin: auto;
-    padding: 1em;
+    padding: 1rem;
     text-align: center;
-    box-shadow: .1em .1em #606060;
+    box-shadow: .1rem .1rem #606060;
+    position: relative;
 }
 
 
 /* Seção pro usuario copiar */
 
 textarea {
-    width: 18em;
-    height: 15em;
-    text-justify: auto;
-    margin-top: 5em;
+    width: 18rem;
+    height: 15rem;
 }
 
 
 /* Aonde o usuario vai digitar o raio */
 
+section input {
+    align-self: center;
+}
+
 input {
-    background-color: #cecece;
+    background-color: #ffffffcc;
     width: 3em;
-    display: block;
-    position: relative;
+    position: absolute;
     text-align: center;
     border-radius: 3px;
+}
+
+
+/* Tirando a seta do input */
+
+input[type=number]::-webkit-inner-spin-button {
+    appearance: none;
 }
 
 
 /* Raio superior esquerdo */
 
 #seinput {
-    right: 5.3em;
-    bottom: 3em;
+    left: -4rem;
+    top: -1.5rem;
 }
 
 
 /* Raio superior direito */
 
 #sdinput {
-    left: 32em;
-    bottom: 4.6em;
+    right: -4rem;
+    top: -1.5rem;
 }
 
 
 /* Raio inferior esquerdo */
 
 #ieinput {
-    right: 5.3em;
-    top: 3em;
+    left: -4rem;
+    bottom: -1.5rem;
 }
 
 
 /* Raio inferior direito */
 
 #idinput {
-    left: 32em;
-    top: 1.5em;
+    right: -4rem;
+    bottom: -1.5rem;
 }

@@ -16,13 +16,14 @@
     <section id="sec">
         <input type="number" name="valor" id="seinput" min="1" max="999" onkeyup="raio()">
         <input type="number" name="valor" id="sdinput" min="1" max="999" onkeyup="raio()">
+        <input type="number" name="valor" id="ieinput" min="1" max="999" onkeyup="raio()">
+        <input type="number" name="valor" id="idinput" min="1" max="999" onkeyup="raio()">
         <div>
-            <textarea name="texto" id="input" cols="30" rows="10" readonly></textarea>
+            <h1>Digite os valores nas caixas</h1>
+            <textarea name="texto" id="input" cols="30" rows="10" readonly style="resize: none;" tabindex="-1"></textarea>
             <p><button onclick="copia()">Copiar</button></p>
         </div>
 
-        <input type="number" name="valor" id="ieinput" min="1" max="999" onkeyup="raio()">
-        <input type="number" name="valor" id="idinput" min="1" max="999" onkeyup="raio()">
     </section>
     <script src="script.js"></script>
 </body>
