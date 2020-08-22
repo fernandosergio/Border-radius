@@ -9,16 +9,14 @@ var botoes = window.document.querySelector('div#compatibilidade')
     // var botCss = window.document.getElementById('botCss3')
 console.log(botoes)
 
-function copia() {
-
+botao.addEventListener('click', () => {
     texto.select()
     texto.setSelectionRange(0, 99999)
     document.execCommand('copy')
     botao.style.backgroundColor = '#adff2f'
     con.innerHTML += 'Copiado!'
-    console.log(botWebkit)
+})
 
-}
 
 function raio() {
     let supesq = window.document.getElementById('seinput')
