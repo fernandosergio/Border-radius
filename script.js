@@ -3,6 +3,10 @@ var texto = window.document.getElementById('input')
 let botao = window.document.getElementById('botao')
 let con = window.document.getElementById('confirmado')
 
+var botWebkit = window.document.getElementById('botWebkit')
+var botGecko = window.document.getElementById('botGecko')
+var botCss = window.document.getElementById('botCss3')
+
 function copia() {
 
     texto.select()
@@ -10,6 +14,7 @@ function copia() {
     document.execCommand('copy')
     botao.style.backgroundColor = '#adff2f'
     con.innerHTML += 'Copiado!'
+    console.log(botWebkit)
 
 }
 
