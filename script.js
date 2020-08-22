@@ -3,9 +3,11 @@ var texto = window.document.getElementById('input')
 let botao = window.document.getElementById('botao')
 let con = window.document.getElementById('confirmado')
 
-var botWebkit = window.document.getElementById('botWebkit')
-var botGecko = window.document.getElementById('botGecko')
-var botCss = window.document.getElementById('botCss3')
+var botoes = window.document.querySelector('div#compatibilidade')
+    //var botWebkit = window.document.getElementById('botWebkit')
+    // var botGecko = window.document.getElementById('botGecko')
+    // var botCss = window.document.getElementById('botCss3')
+console.log(botoes)
 
 function copia() {
 
