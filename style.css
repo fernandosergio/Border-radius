@@ -89,7 +89,7 @@ input:checked[type="checkbox"] {
 input[type="checkbox"]::before {
     font-family: FontAwesome;
     padding-top: 3px;
-    padding-left: 0px;
+    padding-left: 6px;
     font-size: 12pt;
     content: "\f00d";
     height: 20px;
@@ -108,6 +108,7 @@ input[type="checkbox"]::before {
 }
 
 input:checked[type="checkbox"]::before {
+    padding-left: 3px;
     content: "\f00c";
     left: 29px;
     color: #32c873;
@@ -132,7 +133,7 @@ section input {
     align-self: center;
 }
 
-input {
+input[type=number] {
     background-color: #ffffffcc;
     width: 3em;
     position: absolute;
@@ -202,6 +203,10 @@ button>p {
     font-size: 13pt;
     cursor: pointer;
     border-radius: 0.4rem;
+}
+
+#botao:hover {
+    opacity: 0.8;
 }
 
 
