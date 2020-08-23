@@ -39,8 +39,8 @@ botao.addEventListener('click', () => {
 
 // Função para alterar o border radius e o textarea
 function raio() {
+    // Inputs type="number"
     let inputs = window.document.querySelectorAll('input[type=number]')
-
     let se = Number(inputs[0].value)
     let sd = Number(inputs[1].value)
     let ie = Number(inputs[2].value)
@@ -49,31 +49,41 @@ function raio() {
 
     if (se === sd && se === ie && se === id) {
         texto.innerHTML = ''
-        texto.innerHTML += `-webkit-border-radius: ${se}px;&#013;`
-        texto.innerHTML += `-moz-border-radius: ${se}px;&#013;`
-        texto.innerHTML += `border-radius: ${se}px;&#013;`
+
+
+
         atualiza1(se)
     } else {
         texto.innerHTML = ''
-        texto.innerHTML += `-webkit-border-radius: ${se}px ${sd}px ${id}px ${ie}px;&#013;`
-        texto.innerHTML += `-moz-border-radius: ${se}px ${sd}px ${id}px ${ie}px;&#013;`
-        texto.innerHTML += `border-radius: ${se}px ${sd}px ${id}px ${ie}px;&#013;`
         atualiza4(se, sd, id, ie)
     }
 }
 
-function textoWebkit() {
-
+function textoWebkit(se, sd, ie, id) {
+    if (se === && se === ie && se === id) {
+        texto.innerHTML += `-webkit-border-radius: ${se}px;&#013;`
+    } else {
+        texto.innerHTML += `-webkit-border-radius: ${se}px ${sd}px ${id}px ${ie}px;&#013;`
+    }
 }
 
-// Função para atualizar todas as bordas
-function atualiza1(se = 0) {
-    sec.style.borderRadius = `${se}px`
-    botao.style.backgroundColor = '#cecece'
-    con.innerHTML = ''
+function textoGecko(se, sd, ie, id) {
+    if (se === sd && se === ie && se === id) {
+        texto.innerHTML += `-moz-border-radius: ${se}px;&#013;`
+    } else {
+        texto.innerHTML += `-moz-border-radius: ${se}px ${sd}px ${id}px ${ie}px;&#013;`
+    }
 }
 
-// Função para atualizar uma borda
+function textoCss(se, sd, ie, id) {
+    if (se === sd && se === ie && se === id) {
+        texto.innerHTML += `border-radius: ${se}px;&#013;`
+    } else {
+        texto.innerHTML += `border-radius: ${se}px ${sd}px ${id}px ${ie}px;&#013;`
+    }
+}
+
+// Função que atualiza as bordas
 function atualiza4(se = 0, sd = 0, id = 0, ie = 0) {
     sec.style.borderRadius = `${se}px ${sd}px ${id}px ${ie}px`
     botao.style.backgroundColor = '#cecece'
