@@ -7,7 +7,7 @@
 body {
     font-family: 'Baloo Da 2', cursive;
     background-color: rgb(107, 203, 228);
-    font: normal 15pt;
+    font-size: 12pt;
     min-width: 28rem;
 }
 
@@ -15,11 +15,14 @@ body {
 /* Cabeçalho, h1 */
 
 header {
+    font-size: 15pt;
+    margin: 0;
     text-align: center;
     color: rgb(255, 255, 255);
 }
 
 section h1 {
+    font-size: 20pt;
     text-align: center;
     color: #fff;
 }
@@ -54,6 +57,7 @@ div#compatibilidade {
 
 div#compatibilidade div label {
     display: inline-flex;
+    color: #fff;
 }
 
 div#compatibilidade div label input {
