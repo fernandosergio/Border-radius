@@ -20,7 +20,8 @@ botao.addEventListener('click', () => {
     texto.setSelectionRange(0, 99999)
     document.execCommand('copy')
     botao.style.backgroundColor = '#adff2f'
-    con.innerHTML += 'Copiado!'
+    con.style.display = ''
+    con.innerHTML = 'Copiado!'
 })
 
 // Função para alterar o border radius e o textarea
@@ -88,5 +89,5 @@ function textoCss(se, sd, ie, id) {
 function atualiza(se = 0, sd = 0, id = 0, ie = 0) {
     sec.style.borderRadius = `${se}px ${sd}px ${id}px ${ie}px`
     botao.style.backgroundColor = '#cecece'
-    con.innerHTML = ''
+    con.style.display = 'none'
 }

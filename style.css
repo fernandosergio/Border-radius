@@ -52,6 +52,14 @@ div#compatibilidade {
     position: relative;
 }
 
+div#compatibilidade div label {
+    display: inline-flex;
+}
+
+div#compatibilidade div label input {
+    margin-left: 8px;
+}
+
 input[type=checkbox] {
     cursor: pointer;
     position: relative;
@@ -195,3 +203,34 @@ button>p {
     cursor: pointer;
     border-radius: 0.4rem;
 }
+
+
+/* 
+.divanima {
+    position: relative;
+}
+
+.paraTexto {
+    animation: paragrafo;
+    animation-duration: 1s;
+}
+
+@keyframes paragrafo {
+    from {
+        position: absolute;
+        background-color: red;
+        width: 100%;
+        height: 0;
+        top: 0;
+        left: 0;
+        transition: 5s ease-out;
+    }
+    50% {
+        opacity: 0;
+    }
+    to {
+        background-color: black;
+        opacity: 1;
+        height: 100px;
+    }
+} */
