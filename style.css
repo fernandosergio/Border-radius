@@ -188,6 +188,10 @@ button>p {
     margin-bottom: 0;
 }
 
-button {
+#botao {
+    width: 6rem;
+    height: 2.5rem;
+    font-size: 13pt;
     cursor: pointer;
+    border-radius: 0.4rem;
 }

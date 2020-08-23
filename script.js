@@ -46,10 +46,10 @@ function raio() {
 }
 
 function textoWebkit(se, sd, ie, id) {
-    if (se === id && sd == ie) {
-        texto.innerHTML += `-webkit-border-radius: ${se}px ${sd}px;&#013;`
-    } else if (se === sd && se === ie && se === id) {
+    if (se === sd && se === ie && se === id) {
         texto.innerHTML += `-webkit-border-radius: ${se}px;&#013;`
+    } else if (se === id && sd == ie) {
+        texto.innerHTML += `-webkit-border-radius: ${se}px ${sd}px;&#013;`
     } else {
         texto.innerHTML += `-webkit-border-radius: ${se}px ${sd}px ${id}px ${ie}px;&#013;`
     }
@@ -57,20 +57,20 @@ function textoWebkit(se, sd, ie, id) {
 
 
 function textoGecko(se, sd, ie, id) {
-    if (se === id && sd == ie) {
-        texto.innerHTML += `-moz-border-radius: ${se}px ${sd}px;&#013;`
-    } else if (se === sd && se === ie && se === id) {
+    if (se === sd && se === ie && se === id) {
         texto.innerHTML += `-moz-border-radius: ${se}px;&#013;`
+    } else if (se === id && sd == ie) {
+        texto.innerHTML += `-moz-border-radius: ${se}px ${sd}px;&#013;`
     } else {
         texto.innerHTML += `-moz-border-radius: ${se}px ${sd}px ${id}px ${ie}px;&#013;`
     }
 }
 
 function textoCss(se, sd, ie, id) {
-    if (se === id && sd == ie) {
-        texto.innerHTML += `border-radius: ${se}px ${sd}px;&#013;`
-    } else if (se === sd && se === ie && se === id) {
+    if (se === sd && se === ie && se === id) {
         texto.innerHTML += `border-radius: ${se}px;&#013;`
+    } else if (se === id && sd == ie) {
+        texto.innerHTML += `border-radius: ${se}px ${sd}px;&#013;`
     } else {
         texto.innerHTML += `border-radius: ${se}px ${sd}px ${id}px ${ie}px;&#013;`
     }
