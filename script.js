@@ -6,6 +6,7 @@ var texto = window.document.getElementById('input')
 let botao = window.document.getElementById('botao')
 let con = window.document.getElementById('confirmado')
 
+
 // Div e inputs type="checkbox" para comppatibilidade
 var botoes = window.document.querySelector('div#compatibilidade')
 let caixas = document.querySelectorAll('input[type="checkbox"]')
@@ -13,6 +14,7 @@ botoes.addEventListener('change', () => {
     caixas = document.querySelectorAll('input[type="checkbox"]')
     raio()
 })
+
 
 // Função para copiar e colar do textarea
 botao.addEventListener('click', () => {
@@ -49,19 +51,25 @@ function raio() {
     atualiza(se, sd, id, ie)
 }
 
+
 // Função para mostrar webkit
 function textoWebkit(se, sd, ie, id) {
     if (se === sd && se === ie && se === id) {
         // Caso todos os valores forem iguais
+
         texto.innerHTML += `-webkit-border-radius: ${se}px;&#013;`
     } else if (se === id && sd == ie) {
         // Caso os valores sup esq igual ao inf dir e sup dir igual ao inf esq
         texto.innerHTML += `-webkit-border-radius: ${se}px ${sd}px;&#013;`
     } else {
+
         // Caso todos sejam diferentes
+
+
         texto.innerHTML += `-webkit-border-radius: ${se}px ${sd}px ${id}px ${ie}px;&#013;`
     }
 }
+
 
 // Função para mostrar gecko
 function textoGecko(se, sd, ie, id) {
@@ -91,3 +99,4 @@ function atualiza(se = 0, sd = 0, id = 0, ie = 0) {
     botao.style.backgroundColor = '#cecece'
     con.style.display = 'none'
 }
+

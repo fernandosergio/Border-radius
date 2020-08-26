@@ -9,6 +9,7 @@ body {
     background-color: rgb(107, 203, 228);
     font-size: 12pt;
     min-width: 28rem;
+
 }
 
 
@@ -179,6 +180,7 @@ input[type=number]::-webkit-inner-spin-button {
 /* Raio inferior direito */
 
 #idinput {
+
     right: -4rem;
     bottom: -1.5rem;
 }
