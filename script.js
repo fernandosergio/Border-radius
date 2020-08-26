@@ -1,56 +1,102 @@
+// Section para alterar o border-radius
 let sec = window.document.getElementById('sec')
+
+// Textarea, button e p para copiar e colar o texto
 var texto = window.document.getElementById('input')
+let botao = window.document.getElementById('botao')
+let con = window.document.getElementById('confirmado')
 
-// função que copia para area de transferência
-function copia() {
 
+// Div e inputs type="checkbox" para comppatibilidade
+var botoes = window.document.querySelector('div#compatibilidade')
+let caixas = document.querySelectorAll('input[type="checkbox"]')
+botoes.addEventListener('change', () => {
+    caixas = document.querySelectorAll('input[type="checkbox"]')
+    raio()
+})
+
+
+// Função para copiar e colar do textarea
+botao.addEventListener('click', () => {
     texto.select()
     texto.setSelectionRange(0, 99999)
     document.execCommand('copy')
+    botao.style.backgroundColor = '#adff2f'
+    con.style.display = ''
+    con.innerHTML = 'Copiado!'
+})
 
-}
-// função que escreve na textarea o codigo e atualiza o section com os valores informados 
+// Função para alterar o border radius e o textarea
 function raio() {
-    
-    // pega os ids dos 4 inputs
-    let supesq = window.document.getElementById('seinput')
-    let supdir = window.document.getElementById('sdinput')
-    let infesqe = window.document.getElementById('ieinput')
-    let infdir = window.document.getElementById('idinput')
-    
-    // transforma os valores em numeros
-    let se = Number(supesq.value)
-    let sd = Number(supdir.value)
-    let ie = Number(infesqe.value)
-    let id = Number(infdir.value)
-    
-    // verifica se todos os valores são iguais
-    if (se === sd && se === ie && se === id) {
-        
-        // escreve na textarea, o codigo com todos os valores iguais e atualiza a section
-        texto.innerHTML = ''
-        texto.innerHTML += `-webkit-border-radius: ${se}px;&#013;`
-        texto.innerHTML += `-moz-border-radius: ${se}px;&#013;`
-        texto.innerHTML += `border-radius: ${se}px;&#013;`
-        atualiza1(se)
-    } else {
-        
-        // escreve na textarea, o codigo com valores diferentes e atualiza a section
-        texto.innerHTML = ''
-        texto.innerHTML += `-webkit-border-radius: ${se}px ${sd}px ${id}px ${ie}px;&#013;`
-        texto.innerHTML += `-moz-border-radius: ${se}px ${sd}px ${id}px ${ie}px;&#013;`
-        texto.innerHTML += `border-radius: ${se}px ${sd}px ${id}px ${ie}px;&#013;`
-        atualiza4(se, sd, id, ie)
+    // Inputs type="number"
+    let inputs = window.document.querySelectorAll('input[type=number]')
+    let se = Number(inputs[0].value)
+    let sd = Number(inputs[1].value)
+    let ie = Number(inputs[2].value)
+    let id = Number(inputs[3].value)
+
+    // Reseta o texto do textarea e verifica qual checkbox está ativo e aciona sua função especifica
+    texto.innerHTML = ''
+    if (caixas[0].checked == true) {
+        textoWebkit(se, sd, ie, id)
+    }
+    if (caixas[1].checked == true) {
+        textoGecko(se, sd, ie, id)
+    }
+    if (caixas[2].checked == true) {
+        textoCss(se, sd, ie, id)
     }
 
+    // Atualiza os valores dos border radius
+    atualiza(se, sd, id, ie)
 }
 
-// função que atualiza o border-radius de todos os cantos da section
-function atualiza1(se = 0) {
-    sec.style.borderRadius = `${se}px`
+
+// Função para mostrar webkit
+function textoWebkit(se, sd, ie, id) {
+    if (se === sd && se === ie && se === id) {
+        // Caso todos os valores forem iguais
+
+        texto.innerHTML += `-webkit-border-radius: ${se}px;&#013;`
+    } else if (se === id && sd == ie) {
+        // Caso os valores sup esq igual ao inf dir e sup dir igual ao inf esq
+        texto.innerHTML += `-webkit-border-radius: ${se}px ${sd}px;&#013;`
+    } else {
+
+        // Caso todos sejam diferentes
+
+
+        texto.innerHTML += `-webkit-border-radius: ${se}px ${sd}px ${id}px ${ie}px;&#013;`
+    }
 }
 
-// função que atualiza o border-radius de cada canto conforme o valor informado para cada um 
-function atualiza4(se = 0, sd = 0, id = 0, ie = 0) {
+
+// Função para mostrar gecko
+function textoGecko(se, sd, ie, id) {
+    if (se === sd && se === ie && se === id) {
+        texto.innerHTML += `-moz-border-radius: ${se}px;&#013;`
+    } else if (se === id && sd == ie) {
+        texto.innerHTML += `-moz-border-radius: ${se}px ${sd}px;&#013;`
+    } else {
+        texto.innerHTML += `-moz-border-radius: ${se}px ${sd}px ${id}px ${ie}px;&#013;`
+    }
+}
+
+// função para mostrar css3
+function textoCss(se, sd, ie, id) {
+    if (se === sd && se === ie && se === id) {
+        texto.innerHTML += `border-radius: ${se}px;&#013;`
+    } else if (se === id && sd == ie) {
+        texto.innerHTML += `border-radius: ${se}px ${sd}px;&#013;`
+    } else {
+        texto.innerHTML += `border-radius: ${se}px ${sd}px ${id}px ${ie}px;&#013;`
+    }
+}
+
+// Função que atualiza as bordas
+function atualiza(se = 0, sd = 0, id = 0, ie = 0) {
     sec.style.borderRadius = `${se}px ${sd}px ${id}px ${ie}px`
+    botao.style.backgroundColor = '#cecece'
+    con.style.display = 'none'
 }
+

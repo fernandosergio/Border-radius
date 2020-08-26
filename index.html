@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -15,15 +15,37 @@
         <h1>Border radius generator</h1>
     </header>
     <section id="sec">
-        <input type="number" name="valor" id="seinput" min="1" max="999" onkeyup="raio()">
-        <input type="number" name="valor" id="sdinput" min="1" max="999" onkeyup="raio()">
+        <div id="numeros">
+            <input type="number" name="valor" id="seinput" min="1" max="999" onkeyup="raio()">
+            <input type="number" name="valor" id="sdinput" min="1" max="999" onkeyup="raio()">
+            <input type="number" name="valor" id="ieinput" min="1" max="999" onkeyup="raio()">
+            <input type="number" name="valor" id="idinput" min="1" max="999" onkeyup="raio()">
+        </div>
         <div>
-            <textarea name="texto" id="input" cols="30" rows="10" readonly></textarea>
-            <p><button onclick="copia()">Copiar</button></p>
+            <h1>Digite os valores nas caixas</h1>
+            <textarea name="texto" id="input" cols="30" rows="10" readonly style="resize: none;" tabindex="-1"></textarea>
+            <div id="compatibilidade">
+                <div>
+                    <label> Webkit 
+                    <input type="checkbox" value="botWebkit" checked></label>
+                </div>
+                <div>
+                    <label> Gecko 
+                    <input type="checkbox" value="botGecko" checked></label>
+                </div>
+                <div>
+                    <label> CSS3
+                    <input type="checkbox" value="botCss" checked></label>
+                </div>
+            </div>
+            <p><button id="botao"><p>Copiar</p></button></p>
+            <div class="divanima">
+                <div class="paraTexto">
+                    <p id="confirmado"></p>
+                </div>
+            </div>
         </div>
 
-        <input type="number" name="valor" id="ieinput" min="1" max="999" onkeyup="raio()">
-        <input type="number" name="valor" id="idinput" min="1" max="999" onkeyup="raio()">
     </section>
     <script src="script.js"></script>
 </body>
